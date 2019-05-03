@@ -29,7 +29,7 @@ app.post('/sign-up',(req, res)=>{
 
     controlUser.findUser(user, res, controlUser.sendResp);
     
-
+    console.log('xyz');
     // .then(res=>console.log('okay bro ',res))
     // .catch(err=>console.log('not bro ?', err));
 

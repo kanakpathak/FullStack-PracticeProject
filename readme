@@ -1,1 +1,5 @@
- "start": "concurrently \" cd client && webpack-dev-server --open --mode development \"cd back-end && back-end && nodemon"
+FullStack-PracticeProject
+
+After installing all dependencies:
+Command to run project:
+->npm run dev
