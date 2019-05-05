@@ -18,7 +18,7 @@ const Button = styled.button`
 const Paragraph = styled.p`
     color: red
 `;
-const DisplayLogin = ({user, password, handleLogin, handlePassword, onLogin, item})=>{
+const DisplayLogin = ({user, password, handleUser, handlePassword, onLogin, item})=>{
     return(
         <Section>
             <Header>Login</Header>
@@ -27,7 +27,7 @@ const DisplayLogin = ({user, password, handleLogin, handlePassword, onLogin, ite
                 <tbody>
                     <tr>
                         <td>UserName:</td>
-                        <td><TextInput type="text" name="user" onChange={handleLogin} value={user} /></td>
+                        <td><TextInput type="text" name="user" onChange={handleUser} value={user} /></td>
                     </tr>
                     <tr>
                         <td>Password:</td>

@@ -16,14 +16,7 @@ export default class Login extends Component{
         };
     }    
 
-    handleUser = event =>{
-        console.log("event in user=", event.target.value)
-        this.newUser = event.target.value;
-        this.setState({initUser: ''});
-    
-    };
-
-    handleLogin = event=>{
+    handleUser = event=>{
         console.log("event in user=", event.target.value)
         // this.setState({initUser:''});
         this.newUser = event.target.value;
@@ -40,26 +33,16 @@ export default class Login extends Component{
     onLogin = event => {
         console.log('event in login');
         this.setState({user:this.state.initUser, password:this.state.initPass, initUser:'',initPass:''});
-        console.log(this.state.initUser);
-        console.log(this.state.initPass);
+
+
         const user = {
             userId: this.state.initUser,
             password: this.state.initPass
         }
+
+
         
-
-        console.log('**********');
-        console.log(user.userId);
-        console.log(user.password);
-        console.log('**********');
-
         axios.post('http://localhost:3000/sign-up', {user})
-        .then(function(response){
-            console.log(response);
-        })
-        .catch(function(err){
-            console.log(err);
-        });
 
     };
 
@@ -69,7 +52,7 @@ export default class Login extends Component{
             <DisplayLogin 
                 user={this.state.initUser} 
                 password={this.state.initPass}
-                handleLogin={this.handleLogin.bind(this)}
+                handleUser={this.handleUser.bind(this)}
                 handlePassword={this.handlePassword.bind(this)}
                 onLogin={this.onLogin.bind(this)}
                 item={this.state.item}
